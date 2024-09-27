@@ -1,0 +1,654 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    margin-top: 400px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 270px;
+}
+
+/*background pic(clinic)*/
+
+.clinic-pic {
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    z-index: -1; /*display image behind the nav*/
+}
+
+.clinic-pic img {
+    width: 1300px;
+    height: 1200px;
+    object-fit: cover;
+}
+
+/*---------------WELCOME DEETS---------------*/
+
+.welcome-deets h1 {
+    font-size: 45px;
+}
+
+.welcome-deets p{
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.welcome-btn {
+    margin-top: 35px;
+}
+
+/* Fixing hover and transition */
+.welcome-btn a {
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px 35px;
+    border-radius: 10px;
+    
+}
+
+.welcome-btn #bookAppoint a{
+    background-color: #0578A5;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 1px 3px #0578A5, 0 2px 6px grey;
+}
+
+.welcome-btn #aboutUs a{
+    background-color: white;
+    color: #0578A5;
+    font-weight: 500;
+    margin-left: 15px;
+    box-shadow: 0 1px 3px grey, 0 2px 6px white;
+    
+}
+
+#bookAppoint {
+    border: 0px solid transparent;
+
+}
+
+#aboutUs {
+    border: 0px solid transparent;
+    
+}
+
+.welcome-btn button:hover {
+    transform: translateY(-5px); /* Change the Y-axis translation for both buttons */
+    transition: transform 0.5s ease; /* Apply transition to both transform */
+}
+
+.welcome-btn #bookAppoint a:hover {
+    box-shadow: 2px 2px 10px 1px #02658b;
+}
+
+.welcome-btn #aboutUs a:hover {
+    box-shadow: 2px 2px 10px 1px grey;
+}
+
+
+
+/*---------------APPOINTMENTS---------------*/
+
+.appointments {
+    display: flex;
+    justify-content: center;
+    margin-top: 950px;
+}
+
+.appointment-pic img {
+    box-shadow: 0 3px 10px grey, 0 2px 6px white;
+    border-radius: 15px;
+    width: 720px;
+    height: 550px;
+}
+
+.appointment-deets {
+    padding-top: 75px;
+    padding-left: 35px;
+}
+
+.appointment-deets span {
+    font-size: 20px;
+    background-color: white;
+    box-shadow: 0 3px 8px grey, 0 2px 6px white;
+    color: #0578A5;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 13px 18px;
+}
+
+.appointment-deets h1 {
+    font-size: 45px;
+    margin-top: 30px;
+}
+
+.appointment-deets p {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.appointment-btn {
+    margin-top: 35px;
+}
+
+.appointment-btn button {
+    border: 0px solid transparent;
+}
+
+.appointment-btn button a {
+    background-color: #0578A5;
+    color: white;
+    box-shadow: 0 1px 3px #0578A5, 0 2px 6px grey;
+}
+
+.appointment-btn a {
+    font-weight: 600;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 4px grey;
+}
+
+.appointment-btn button:hover {
+    transform: translateY(-5px); /* Change the Y-axis translation for both buttons */
+    transition: transform 0.5s ease; /* Apply transition to both transform */
+}
+
+.appointment-btn a:hover {
+    box-shadow: 2px 2px 10px 1px #02658b;
+}
+
+
+/*---------------CLINICS---------------*/
+
+.clinics {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 550px;
+}
+
+.clinic-deets span{
+    font-size: 20px;
+    background-color: white;
+    box-shadow: 0px 5px 4px grey;
+    color: #0578A5;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 16px;
+}
+
+.clinic-deets h1 {
+    font-size: 45px;
+    margin-top: 30px;
+}
+
+.clinic-deets p {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+#image-container {
+    display: flex;
+    gap: 35px; /* Space between boxes */
+    padding: 20px; /* Padding around the container */
+}
+
+/* Style individual image boxes */
+.image-box {
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center image inside the box */
+    transition: transform 0.2s ease-in-out; /* Smooth zoom effect */
+}
+
+/* Image inside each box */
+.image-box img {
+    width: 450px;
+    max-height: 325px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 3px 5px grey, 0 2px 6px white;
+}
+
+/* Hover effect to zoom in */
+.image-box:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.image-box img:hover {
+    box-shadow: 2px 4px 10px 1px grey;
+}
+
+.image-label {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Modal structure */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content (details of the clinic) */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    width: 100vh;
+    height: 75vh;
+}
+
+.title-container {
+    display: flex;
+    justify-content: end;
+    margin-top: 40px;
+    margin-right: 110px;
+}
+
+/* Title style */
+.title-container .modal-title{
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.upper-div {
+    display: flex;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+    gap: 100px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.content-container .open-close {
+    margin-left: -320px;
+}
+
+.content-container .image-stats {
+    display: flex;
+    flex-direction: row;
+}   
+
+.content-container .hours {
+    display: flex;
+}
+
+.hours {
+    margin-top: -50px;
+}
+
+.hours i {
+    font-size: 35px;
+    margin-right: 10px;
+}
+
+.hours p {
+    font-size: 20px;
+}
+
+.days-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    margin-top: -75px;
+}
+
+.day {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.day-name {
+    font-weight: 500;
+}
+
+.time {
+    margin-left: 200px;
+}
+
+/* Enlarged image style */
+.modal-content img {
+    margin-left: 60px;
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* Description style */
+.modal-description {
+    display: flex;  
+    margin-top: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.clinic-btn {
+    margin-top: 35px;
+}
+
+.clinic-btn button{
+    border: 0px solid transparent;
+}
+
+.clinic-btn button a {
+    background-color: #0578A5;
+    box-shadow: 0 1px 3px #0578A5, 0 2px 6px grey;
+    color: white;
+}
+
+.clinic-btn a {
+    font-weight: 600;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 12px 23px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 4px grey;
+}
+
+.clinic-btn button:hover {
+    transform: translateY(-5px); /* Change the Y-axis translation for both buttons */
+    transition: transform 0.5s ease; /* Apply transition to both transform */
+}
+
+.clinic-btn a:hover {
+    box-shadow: 2px 2px 10px 0.1px #02658b;
+}
+
+/*---------------ABOUT US---------------*/
+
+.about-us {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 550px;
+}
+
+.about-us span{
+    font-size: 20px;
+    background-color: white;
+    box-shadow: 0px 5px 4px grey;
+    color: #0578A5;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 16px;
+}
+
+.about-us h1 {
+    font-size: 45px;
+    margin-top: 30px;
+}
+
+.about-us p {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.about-pic img {
+    margin-top: 10px;
+    box-shadow: 0 3px 5px grey, 0 2px 6px white;
+    border-radius: 15px;
+    width: 800px;
+    height: 550px;
+    object-fit: cover;
+}
+
+.about-btn {
+    margin-top: 35px;
+}
+
+.about-btn button{
+    border: 0px solid transparent;
+}
+
+.about-btn button a {
+    background-color: #0578A5;
+    box-shadow: 0 1px 3px #0578A5, 0 2px 6px grey;
+    color: white;
+}
+
+.about-btn a {
+    font-weight: 600;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 12px 23px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 4px grey;
+}
+
+.about-btn button:hover {
+    transform: translateY(-5px); /* Change the Y-axis translation for both buttons */
+    transition: transform 0.5s ease; /* Apply transition to both transform */
+}
+
+.about-btn a:hover {
+    box-shadow: 2px 2px 10px 0.1px #02658b;
+}
+
+/*---------------CONTACT US---------------*/
+
+.contact-us {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin-top: 550px;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+    margin-bottom: 200px;
+}
+
+.contact-us .contact-content span {
+    font-size: 20px;
+    background-color: white;
+    box-shadow: 0px 5px 4px grey;
+    color: #0578A5;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 16px;
+    width: 145px;
+}
+
+.contact-us .contact-content h1 {
+    font-size: 45px;
+    margin-top: 30px;
+}
+
+.contact-us .contact-content p {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.contact-deets {
+    display: flex;
+    margin-top: 35px;
+    gap: 30px;
+}
+
+.phone-icon i{
+    background-color: #0578A5;
+    padding: 8px;
+    box-shadow: 0 1px 3px #0578A5, 0 2px 6px grey;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    margin-right: 10px;
+}
+
+.email-icon i{
+    background-color: #0578A5;
+    padding: 8px;
+    box-shadow: 0 1px 3px #0578A5, 0 2px 6px grey;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    margin-right: 10px;
+}
+
+/*RIGHT SIDE CONTAINER*/
+.contact-container {
+    background-color: white;
+    box-shadow: 0px 5px 4px grey;
+    display: flex;
+    flex-direction: column;
+    height: 625px;
+    width: 500px;
+    padding: 50px;
+    border-radius: 10px;
+    gap: 30px;
+    font-size: 20px;
+}
+
+.upper-deets {
+    display: flex;
+    gap: 15px;
+}
+
+.lower-deets {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-container p {
+    font-weight: 600;
+}
+
+.contact-container input, textarea {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    border-color: #D9D9D9;
+    background-color: white;
+    padding: 15px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.msg textarea {
+    resize: none;
+    width: 100%;
+    min-height: 160px;
+    height: 100%;
+}
+
+.submit-btn {
+    margin-top: 20px;
+}
+
+.submit-btn button {
+    cursor: pointer;
+    border: 0px solid transparent;
+    padding: 10px 15px;
+    background-color: #0578A5;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px #0578A5, 0 2px 6px grey;
+    font-weight: 500;
+}
+
+/*---------------FOOTER---------------*/
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 300px;
+    background-color: white;
+    padding: 0px 500px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    margin-right: -10px;
+}
+
+.footer-links {
+    display: flex;
+    margin-top: 15px;
+    gap: 5px;
+}
+
+.footer-links h1 {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.footer-logo i {
+    color: #D9D9D9;
+    font-size: 35px;
+}
+
+.footer-logo i.fa-x-twitter{
+    font-size: 30px;
+    margin-top: 4px;
+}
+
+.footer-logo i:hover {
+    color: #0578A5;
+    transition: color 0.5s ease;
+}
+
+.footer-logo img {
+    height: 90px;
+    width: 95px;
+}
